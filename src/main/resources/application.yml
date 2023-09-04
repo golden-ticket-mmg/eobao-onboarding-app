@@ -1,6 +1,10 @@
 server:
   port:
-    9504
+    9501
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-exception: true
 spring:
   application:
     name: eobao-onboarding-app

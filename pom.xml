@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hackearth.goldenticket.mmg</groupId>
-	<artifactId>eobao-obboarding-app</artifactId>
+	<artifactId>eobao-onboarding-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>eobao-obboarding-app</name>
+	<name>eobao-onboarding-app</name>
 	<description>The onboarding application</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -22,9 +22,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<!--============ Web ============-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!--========== Actuator =========-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>de.codecentric</groupId>

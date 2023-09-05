@@ -23,9 +23,10 @@ public class RestEntryPoint {
     @GetMapping("/{arn}")
     public Company getCompany(@PathVariable String arn) {
         log.info("Looking for company by ARN {}", arn);
+        String url = "http://localhost:9502/online-data/" + arn;
+        log.info("Sourcing company data from {}", url);
         ResponseEntity<Company> responseEntity = restTemplate
-                .getForEntity("http://localhost:9502/online-data/" + arn,
-                        Company.class);
+                .getForEntity(url, Company.class);
 
         Company company = responseEntity.getBody();
         log.info("For ARN {} found company {}", arn, company);

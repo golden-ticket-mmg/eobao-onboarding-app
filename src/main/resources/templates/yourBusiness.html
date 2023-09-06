@@ -7,6 +7,21 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+h1   {
+	background-color: #5A287D;
+	color: white;
+}
+div.jumbotron {
+	background-color: #5A287D;
+	color: white;
+}
+a.btn-lg {
+	background-color: #5A287D;
+	color: white;
+}
+</style>
 </head>
 <body>
 
@@ -17,11 +32,11 @@
 
 
 		<div class="row">
+			<div class="col-sm-2 bg-success">Document Upload</div>
+			<div class="col-sm-2 bg-success">&gt;&gt;</div>
 			<div class="col-sm-2 bg-success">Get Started</div>
 			<div class="col-sm-2 bg-success">&gt;&gt;</div>
 			<div class="col-sm-2 bg-warning">Your Business</div>
-			<div class="col-sm-2">&gt;&gt;</div>
-			<div class="col-sm-2">Your Account</div>
 		</div>
 
 		
@@ -51,37 +66,37 @@
 			</div>
 
 			<div class="form-group">
-				<label for="email">Business Name</label> 
-				<input type="text" class="form-control" placeholder="" id="firstName" >
+				<label for="bizName">Business Name</label> 
+				<input type="text" class="form-control" placeholder="" id="bizName" >
 			</div>
 				
 			<div class="form-group">
-				<label for="email">Trading Address</label> 
-				<input type="text" class="form-control" placeholder="Address Line 1" id="addr1" >
-				<input type="text" class="form-control" placeholder="Address Line 2" id="addr2" >
-				<input type="text" class="form-control" placeholder="Address Line 3" id="addr3" >
-				<input type="text" class="form-control" placeholder="Address Line 4" id="addr4" >
-				<input type="text" class="form-control" placeholder="Post Code" id="postCode" >
+				<label for="tradingAddr1">Trading Address</label> 
+				<input type="text" class="form-control" placeholder="Address Line 1" id="tradingAddr1" >
+				<input type="text" class="form-control" placeholder="Address Line 2" id="tradingAddr2" >
+				<input type="text" class="form-control" placeholder="Address Line 3" id="tradingAddr3" >
+				<input type="text" class="form-control" placeholder="Address Line 4" id="tradingAddr4" >
+				<input type="text" class="form-control" placeholder="Post Code" id="tradingAddrPostCode" >
+			</div>
+			<!-- 
+			<div class="form-group">
+				<label for="corrAddr1">Correspondence Address</label> 
+				<input type="text" class="form-control" placeholder="Address Line 1" id="corrAddr1" >
+				<input type="text" class="form-control" placeholder="Address Line 2" id="corrAddr2" >
+				<input type="text" class="form-control" placeholder="Address Line 3" id="corrAddr3" >
+				<input type="text" class="form-control" placeholder="Address Line 4" id="corrAddr4" >
+				<input type="text" class="form-control" placeholder="Post Code" id="corrAddrPostCode" >
+			</div>
+				 -->
+			<div class="form-group">
+				<label for="website">Website</label> 
+				<input type="text" class="form-control" placeholder="" id="website" >
 			</div>
 			
-			<div class="form-group">
-				<label for="email">Correspondence Address</label> 
-				<input type="text" class="form-control" placeholder="Address Line 1" id="addr1" >
-				<input type="text" class="form-control" placeholder="Address Line 2" id="addr2" >
-				<input type="text" class="form-control" placeholder="Address Line 3" id="addr3" >
-				<input type="text" class="form-control" placeholder="Address Line 4" id="addr4" >
-				<input type="text" class="form-control" placeholder="Post Code" id="postCode" >
-			</div>
-				
-			<div class="form-group">
-				<label for="email">Website</label> 
-				<input type="text" class="form-control" placeholder="" id="firstName" >
-			</div>
-			
 			
 			<div class="form-group">
-				<label for="email">Start Trading</label> 
-				<input type="text" class="form-control" placeholder="" id="firstName" >
+				<label for="startTrading">Start Trading</label> 
+				<input type="text" class="form-control" placeholder="" id="startTrading" >
 			</div>
 			
 			<div class="form-group">				
@@ -105,19 +120,28 @@
 				  </select>
 			</div>
 
-			<a href="/onboarding/getStarted" class="btn btn-default">Back</a>
-			<a href="/onboarding/yourAccount" class="btn btn-default">Next</a>
 			<!-- 
 			<button type="submit" class="btn btn-default">Back</button>
 			<button type="submit" class="btn btn-default">Next</button>
 			 -->
 		</form>
 		
-		<div class="jumbotron text-center">
-			<h1></h1>
-		</div>
 	</div>
 
+	<div class="container text-center">
+	<!-- 
+		<p>Ready to upload document?</p>
 
+		<a href="/onboarding/documentUpload" class="btn btn-default">Upload</a>
+		<a href="/onboarding/getStarted" class="btn btn-default">Skip</a
+ -->
+			<a href="/onboarding/getStarted" class="btn btn-default btn-lg">Back</a>
+			<a href="/onboarding/yourAccount" class="btn btn-default btn-lg">Next</a>
+	</div>
+
+	<div class="container text-center">
+	&nbsp;
+	</div>
+	
 </body>
 </html>

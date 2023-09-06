@@ -7,6 +7,21 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+h1   {
+	background-color: #5A287D;
+	color: white;
+}
+div.jumbotron {
+	background-color: #5A287D;
+	color: white;
+}
+button.btn-lg {
+	background-color: #5A287D;
+	color: white;
+}
+</style>
 </head>
 <body>
 	<div class="parent container d-flex justify-content-center align-items-center h-100">
@@ -24,7 +39,7 @@
 				<label for="pwd">Password:</label> 
 				<input type="password" class="form-control" id="pwd" th:field="*{pwd}">
 			</div>
-			<button type="submit" class="btn btn-default">Submit</button>
+			<button type="submit" class="btn btn-default btn-lg">Submit</button>
 		</form>
 		
 	</div>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="parent container d-flex justify-content-center align-items-center h-100">
+		<div class="jumbotron text-center">
+			<h1>NatWest Banking Account Opening</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-1">Get Started</div>
+			<div class="col-sm-1">&gt;&gt;</div>
+			<div class="col-sm-1">Your Business</div>
+			<div class="col-sm-1">&gt;&gt;</div>
+			<div class="col-sm-1">Your Team</div>
+			<div class="col-sm-1">&gt;&gt;</div>
+			<div class="col-sm-1">Your Account</div>
+		</div>
+
+
+		<form action="#" method="post">
+
+			<h2>Upload Document to prove your identity & address</h2>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Photo ID</div>
+				<div class="panel-body">
+					<div class="radio">
+						<label><input type="radio" name="optradio">Passport</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="optradio">Driving License</label>
+					</div>
+					<div class="form-inline">
+						<input type="file" class="form-control" id="customFile" />
+						<button type="submit" class="btn btn-default">Upload</button>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Proof of Address</div>
+				<div class="panel-body">
+					<div class="radio">
+						<label><input type="radio" name="optradio">Tax
+							Document</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="optradio">Bank
+							Statement</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="optradio">Utility
+							Bill</label>
+					</div>
+					<div class="form-inline">
+						<input type="file" class="form-control" id="customFile" />
+						<button type="submit" class="btn btn-default">Upload</button>
+					</div>
+				</div>
+			</div>
+
+<!-- 
+			<a href="/onboarding/documentUpload" class="btn btn-default">Back</a>
+			<a href="/onboarding/yourBusiness" class="btn btn-default">Next</a>
+			
+			<button type="submit" class="btn btn-default">Back</button>
+			<button type="submit" class="btn btn-default">Next</button>
+			 -->
+		</form>
+	</div>
+
+
+	<div class="container text-center">
+		<p>Ready to upload document?</p>
+
+
+		<a href="/onboarding/documentUpload" class="btn btn-default">Upload</a>
+		<a href="/onboarding/getStarted" class="btn btn-default">Skip</a>
+	</div>
+
+
+
+</body>
+</html>

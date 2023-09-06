@@ -41,13 +41,13 @@ a.btn-lg {
 
 		
 	
-		<form action="#" method="post">
+		<form action="#" th:object="${yourBusinessInfo}" method="post">
 			<h2>A little bit about your business</h2>
 			<div class="form-group">
 				<label for="email">Business account</label> 
 
 				<div class="radio">
-				  <label><input type="radio" name="optradio">Business Current Account</label>
+				  <label><input type="radio" name="optradio" checked>Business Current Account</label>
 				</div>
 				<div class="radio">
 				  <label><input type="radio" name="optradio">Loan Servicing Account</label>
@@ -59,7 +59,7 @@ a.btn-lg {
 				  <label for="sel1">Confirm your type of organization</label>
 				  <select class="form-control" id="sel1">
 				    <option>Limited Company</option>
-				    <option>Sole Trader</option>
+				    <option selected>Sole Trader</option>
 				    <option>Partnership</option>
 				  </select>
 				</div>
@@ -67,16 +67,16 @@ a.btn-lg {
 
 			<div class="form-group">
 				<label for="bizName">Business Name</label> 
-				<input type="text" class="form-control" placeholder="" id="bizName" >
+				<input type="text" class="form-control" placeholder="" id="bizName"  th:field="*{businessName}">
 			</div>
 				
 			<div class="form-group">
 				<label for="tradingAddr1">Trading Address</label> 
-				<input type="text" class="form-control" placeholder="Address Line 1" id="tradingAddr1" >
-				<input type="text" class="form-control" placeholder="Address Line 2" id="tradingAddr2" >
-				<input type="text" class="form-control" placeholder="Address Line 3" id="tradingAddr3" >
-				<input type="text" class="form-control" placeholder="Address Line 4" id="tradingAddr4" >
-				<input type="text" class="form-control" placeholder="Post Code" id="tradingAddrPostCode" >
+				<input type="text" class="form-control" placeholder="Address Line 1" id="tradingAddr1" value="Flat 1-5, Waterfall Building">
+				<input type="text" class="form-control" placeholder="Address Line 2" id="tradingAddr2" value="George Road">
+				<input type="text" class="form-control" placeholder="Address Line 3" id="tradingAddr3" value="Sutton">
+				<input type="text" class="form-control" placeholder="Address Line 4" id="tradingAddr4" value="England">
+				<input type="text" class="form-control" placeholder="Post Code" id="tradingAddrPostCode" value="CR4 1WM">
 			</div>
 			<!-- 
 			<div class="form-group">
@@ -90,18 +90,19 @@ a.btn-lg {
 				 -->
 			<div class="form-group">
 				<label for="website">Website</label> 
-				<input type="text" class="form-control" placeholder="" id="website" >
+				<input type="text" class="form-control" placeholder="" id="website"  th:field="*{website}">
 			</div>
 			
 			
 			<div class="form-group">
 				<label for="startTrading">Start Trading</label> 
-				<input type="text" class="form-control" placeholder="" id="startTrading" >
+				<input type="text" class="form-control" placeholder="" id="startTrading"  th:field="*{startedTradingSince}">
 			</div>
 			
 			<div class="form-group">				
 				  <label for="sel1">Why you're opening a business account</label>
 				  <select class="form-control" id="sel1">
+				  <option>------</option>
 				    <option>You've been operating with your personal account with RBS</option>
 				    <option>You're switching to RBS from other bank</option>
 				    <option>You purchased/acquired this business</option>
@@ -136,7 +137,7 @@ a.btn-lg {
 		<a href="/onboarding/getStarted" class="btn btn-default">Skip</a
  -->
 			<a href="/onboarding/getStarted" class="btn btn-default btn-lg">Back</a>
-			<a href="/onboarding/yourAccount" class="btn btn-default btn-lg">Next</a>
+			<a href="/onboarding/submit" class="btn btn-default btn-lg">Submit</a>
 	</div>
 
 	<div class="container text-center">

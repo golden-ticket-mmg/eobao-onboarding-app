@@ -39,47 +39,47 @@ a.btn-lg {
 			<div class="col-sm-2">Your Business</div>
 		</div>
 	
-		<form action="#" method="post">
+		<form action="#" th:object="${getStartedInfo}" method="post">
 			<h2>A little about you</h2>
 			<div class="form-group">
 				<label for="firstName">Your name</label> 
 				<div class=" form-inline">
-					<input type="text" class="form-control" placeholder="First Name" id="firstName" >
-					<input type="text" class="form-control" placeholder="Middle Name" id="middleName" >
-					<input type="text" class="form-control" placeholder="Last Name" id="lastName" >
+					<input type="text" class="form-control" placeholder="First Name" id="firstName"  th:field="*{firstName}">
+					<input type="text" class="form-control" placeholder="Middle Name" id="middleName" value="Sally">
+					<input type="text" class="form-control" placeholder="Last Name" id="lastName"  th:field="*{lastName}">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="dateOfBirth">Date of Birth</label> 
-				<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="dateOfBirth" >
+				<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="dateOfBirth"  th:field="*{dateOfBirth}">
 			</div>
 			<div class="form-group">
 				<label for="email">Email</label> 
-				<input type="text" class="form-control" placeholder="" id="email" >
+				<input type="text" class="form-control" placeholder="" id="email" value="peter@abc.com">
 			</div>
 			<div class="form-group">
 				<label for="mobileNo">Mobile No.</label> 
-				<input type="text" class="form-control" placeholder="" id="mobileNo" >
+				<input type="text" class="form-control" placeholder="" id="mobileNo"  th:field="*{mobileNumber}">
 			</div>
 			<div class="form-group">
 				<label for="countryOfBirth">Country of Birth</label> 
-				<input type="text" class="form-control" placeholder="" id="countryOfBirth" >
+				<input type="text" class="form-control" placeholder="" id="countryOfBirth"  th:field="*{countryOfBirth}">
 			</div>
 			<div class="form-group">
 				<label for="townOfBirth">Town of Birth</label> 
-				<input type="text" class="form-control" placeholder="" id="townOfBirth" >
+				<input type="text" class="form-control" placeholder="" id="townOfBirth" value="London">
 			</div>
 			<div class="form-group">
 				<label for="nationality">Nationality</label> 
-				<input type="text" class="form-control" placeholder="" id="nationality" >
+				<input type="text" class="form-control" placeholder="" id="nationality"  th:field="*{nationality}">
 			</div>
 			<div class="form-group">
 				<label for="homeAddr">Home Address</label> 
-				<input type="text" class="form-control" placeholder="Address Line 1" id="homeAddr1" >
-				<input type="text" class="form-control" placeholder="Address Line 2" id="homeAddr2" >
-				<input type="text" class="form-control" placeholder="Address Line 3" id="homeAddr3" >
-				<input type="text" class="form-control" placeholder="Address Line 4" id="homeAddr4" >
-				<input type="text" class="form-control" placeholder="Post Code" id="postCode" >
+				<input type="text" class="form-control" placeholder="Address Line 1" id="homeAddr1"  th:field="*{address}">
+				<input type="text" class="form-control" placeholder="Address Line 2" id="homeAddr2" value="Kingston">
+				<input type="text" class="form-control" placeholder="Address Line 3" id="homeAddr3" value="London">
+				<input type="text" class="form-control" placeholder="Address Line 4" id="homeAddr4" value="England">
+				<input type="text" class="form-control" placeholder="Post Code" id="postCode" value="TW14 8AJ">
 			</div>
 			<div class="form-group">
 				<label for="moveIn">Move into since</label> 

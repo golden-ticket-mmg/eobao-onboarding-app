@@ -1,6 +1,9 @@
 package com.hackearth.goldenticket.mmg.eobaoobboardingapp.service;
 
 import com.hackearth.goldenticket.mmg.eobaoobboardingapp.data.Company;
+import com.hackearth.goldenticket.mmg.eobaoobboardingapp.data.GetStartedInfo;
+import com.hackearth.goldenticket.mmg.eobaoobboardingapp.data.YourBusinessInfo;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,5 +36,34 @@ public class RestEntryPoint {
 
         return company;
 
+    }
+    
+    //@GetMapping("/getstarted/{arn}")
+    public GetStartedInfo getGetStarted(@PathVariable String arn) {
+        log.info("Looking for getStartedInfo by ARN {}", arn);
+        String url = "http://localhost:9502/online-data/getstarted/" + arn;
+        log.info("Sourcing getStartedInfo data from {}", url);
+        ResponseEntity<GetStartedInfo> responseEntity = restTemplate
+                .getForEntity(url, GetStartedInfo.class);
+
+        GetStartedInfo getStartedInfo = responseEntity.getBody();
+        log.info("For ARN {} found getStartedInfo {}", arn, getStartedInfo);
+
+        return getStartedInfo;
+    }
+    
+
+    //@GetMapping("/yourbusiness/{arn}")
+    public YourBusinessInfo getYourBusiness(@PathVariable String arn) {
+        log.info("Looking for YourBusinessInfo by ARN {}", arn);
+        String url = "http://localhost:9502/online-data/yourbusiness/" + arn;
+        log.info("Sourcing YourBusinessInfo data from {}", url);
+        ResponseEntity<YourBusinessInfo> responseEntity = restTemplate
+                .getForEntity(url, YourBusinessInfo.class);
+
+        YourBusinessInfo yourBusinessInfo = responseEntity.getBody();
+        log.info("For ARN {} found getStartedInfo {}", arn, yourBusinessInfo);
+
+        return yourBusinessInfo;
     }
 }

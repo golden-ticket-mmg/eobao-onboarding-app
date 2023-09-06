@@ -3,6 +3,7 @@ This is the onboarding and account opening application
 
 # GetStartedInfo example
 Endpoint: http://localhost:9502/online-data/getstarted/1
+
 Example:
 ```
 {
@@ -18,7 +19,7 @@ Example:
 ```
 
 # YourBusinessInfo 
-Endpoint: localhost:9502/online-data/yourbusiness/1
+Endpoint: http://localhost:9502/online-data/yourbusiness/1
 
 Example:
 ```
